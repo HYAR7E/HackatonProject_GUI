@@ -4,16 +4,16 @@ import React from 'react'
 // Inicio (informacion sobre el sistema, objetivo, Login)
 const HomePage = () => {
   return (
-    <div className="row" style={style_container}>
+    <div className="row" style={style.style_container}>
       <div className="col-lg-7">
-        <div style={style_logotitle}>
+        <div style={style.style_logotitle}>
           <LogoTitle />
         </div>
-        <div style={style_testdiv1}>
+        <div style={style.style_testdiv1}>
           <Content />
         </div>
       </div>
-      <div className="col-lg-5" style={style_testdiv2}>
+      <div className="col-lg-5" style={style.style_testdiv2}>
         <FacebookLogin />
       </div>
     </div>
@@ -31,7 +31,7 @@ const LogoTitle = () => {
 }
 const Content = () => {
   return (
-    <div style={style_content}>
+    <div style={style.style_content}>
       <h3>Colaboración en la UNHEVAL</h3>
       <ProjectInfo />
     </div>
@@ -47,11 +47,13 @@ const FacebookLogin = () => {
 }
 
 // Styles
-let style_container = {paddingLeft: "45px", paddingRight: "45px", paddingTop: "45px"}
-let style_testdiv1 = {background: "tomato"}
-let style_testdiv2 = {background: "darkgreen"}
-let style_logotitle = {paddingLeft: "25px", paddingBottom: "65px"}
-let style_content = {height: "400px"}
+let style = {
+  style_container: {paddingLeft: "45px", paddingRight: "45px", paddingTop: "45px"},
+  style_testdiv1: {background: "tomato"},
+  style_testdiv2: {background: "darkgreen"},
+  style_logotitle: {paddingLeft: "25px", paddingBottom: "65px"},
+  style_content: {height: "400px"},
+}
 
 
 export default HomePage;
