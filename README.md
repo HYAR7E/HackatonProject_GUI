@@ -13,3 +13,4 @@
 
 ### Contributors
 - AGUSTIN FALCON, Neldo
+- SILVESTRE MONAGO, Bryan
