@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+
+const App = () => {
+  const [variable, setVariable] = useState(0);
+  let i = 0;
+
+  const contadorVar = () => {
+    setVariable(variable+1);
+  }
+  const contadorI = () => {
+    i++;
+  }
+
+  console.log("Variable: ", variable, "||", "I: ", i)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 id="msg">CONTADOR V: {variable}</h1>
+      <h1 id="msg">CONTADOR I: {i}</h1>
+
+      <button
+        className="btn btn-primary waves-effect waves-themed"
+        onClick={() => contadorVar()}>
+          CAMBIAR VARIABLE
+      </button>
+
+      <button
+        className="btn btn-primary waves-effect waves-themed"
+        onClick={() => contadorI()}>
+          CAMBIAR I
+      </button>
     </div>
   );
 }
