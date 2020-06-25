@@ -7,6 +7,7 @@
 - JS Plugins
 - Cache handling
 
+
 ### Specifications
 - Modular programming
 
