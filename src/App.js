@@ -1,14 +1,17 @@
 import React from 'react'
-import HomePage from './master/HomePage'
-import {JobOfferList} from './master/logged/components/JobOffers'
+import {
+  BrowserRouter as Router,  // Router needed && Allow history of visited pages
+} from "react-router-dom";  // https://reacttraining.com/react-router/web/api/
+
+// Components to import
+import Navigation from './master/Navigation'
 
 
-// Bypass User layer deep:1
 const App = () => {
   return (
-    <div>
-      <JobOfferList />
-    </div>
+    <Router>
+      <Navigation />
+    </Router>
   )
 }
 
